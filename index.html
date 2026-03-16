@@ -14,11 +14,16 @@
   <!-- NAV -->
   <nav>
     <a href="#hero" class="nav-logo">JB.</a>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#resume">Resume</a></li>
+      <li><a href="#connect" class="nav-connect-btn">Connect</a></li>
     </ul>
   </nav>
 
@@ -28,7 +33,7 @@
       <p class="hero-eyebrow">Computer Engineering Student</p>
       <h1 class="hero-name">Jhove Batarao.<br><em>Builder. Designer.</em></h1>
       <p class="hero-bio">
-        I'm a Computer Engineering student passionate about building thoughtful digital products —
+        I'm a Computer Engineering student passionate about building thoughtful digital products
         from cloud-native systems to clean user interfaces. I'm exploring software development,
         UI/UX design, and data science.
       </p>
@@ -138,12 +143,10 @@
           </div>
         </a>
 
-        <!-- Placeholder -->
-        <div class="project-placeholder">
-          <span>+</span>
-          More projects coming soon — currently building.
-        </div>
+      </div>
 
+      <div class="projects-cta">
+        <a href="projects.html" class="btn btn-primary">View all projects →</a>
       </div>
     </div>
   </section>
@@ -194,6 +197,50 @@
             <span class="tag">Machine Learning</span>
             <span class="tag">SQL</span>
             <span class="tag">React</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div class="container">
+      <p class="section-label">Credentials</p>
+      <h2 class="section-title">Certificates & Licenses</h2>
+      <div class="cert-list">
+
+        <div class="cert-item">
+          <div class="cert-main">
+            <p class="cert-name">CC Certified in Cybersecurity</p>
+            <p class="cert-issuer">ISC2</p>
+          </div>
+          <div class="cert-meta">
+            <span class="cert-date">March 2026</span>
+            <a href="https://drive.google.com/file/d/1H94RnR9TB396NA6fpRh32vaFE-WVB2XX/view?usp=sharing" class="cert-link" target="_blank">View ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-main">
+            <p class="cert-name">AWS Cloud Practitioner Essentials</p>
+            <p class="cert-issuer">Amazon Web Services</p>
+          </div>
+          <div class="cert-meta">
+            <span class="cert-date">March 2026</span>
+            <a href="https://drive.google.com/file/d/1cBIlEbo-9cktTecRt3PDpPgwtGgBk2BF/view?usp=sharing" class="cert-link" target="_blank">View ↗</a>
+          </div>
+        </div>
+
+        <div class="cert-item">
+          <div class="cert-main">
+            <p class="cert-name">CS50: Introduction to Computer Science</p>
+            <p class="cert-issuer">Harvard University</p>
+          </div>
+          <div class="cert-meta">
+            <span class="cert-date">April 2026</span>
+            <a href="#" class="cert-link" target="_blank">View ↗</a>
           </div>
         </div>
 
@@ -264,7 +311,7 @@
       </p>
       <div class="connect-grid">
  
-        <a href="mailto:you@email.com" class="connect-card">
+        <a href="/cdn-cgi/l/email-protection#cfb6a0ba8faaa2aea6a3e1aca0a2" class="connect-card">
           <div class="connect-icon">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 7 10-7"/>
@@ -349,9 +396,11 @@
   <!-- FOOTER -->
   <footer>
     <div class="container">
-      <p>Built by Jhove Batarao · <a href="mailto:you@email.com">cb.jhove@email.com</a></p>
+     
+      <p>Designed &amp; built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
     </div>
   </footer>
 
+  <script src="main.js"></script>
 </body>
 </html>
