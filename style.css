@@ -157,6 +157,7 @@ section + section {
 }
 
 .hero-name em {
+  font-size: 3.05rem;
   font-style: italic;
   color: var(--accent);
 }
