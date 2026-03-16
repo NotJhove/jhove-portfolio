@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects — Jhove's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .projects-page-hero {
+      padding-top: 9rem;
+      padding-bottom: 3rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.825rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: color 0.2s;
+    }
+
+    .back-link:hover { color: var(--text); }
+
+    .projects-page-hero .hero-bio {
+      margin-bottom: 0;
+    }
+
+    .projects-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      font-size: 0.775rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      transition: all 0.2s;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--text);
+      color: var(--bg);
+      border-color: var(--text);
+    }
+
+    .projects-page-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      padding-bottom: 5rem;
+    }
+
+    /* Status badge on project cards */
+    .project-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-size: 0.7rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 3px;
+      font-weight: 400;
+      letter-spacing: 0.03em;
+      margin-bottom: 0.6rem;
+    }
+
+    .project-status::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: currentColor;
+    }
+
+    .status-complete {
+      background: var(--accent-light);
+      color: var(--accent);
+    }
+
+    .status-wip {
+      background: #fef3c7;
+      color: #b45309;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .status-wip {
+        background: #2d1f00;
+        color: #f59e0b;
+      }
+    }
+
+    .status-concept {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+    }
+
+    .project-placeholder {
+      border: 1px dashed var(--border);
+      border-radius: 8px;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+
+    .project-placeholder span {
+      font-size: 1.5rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">JB.</a>
+    <ul class="nav-links">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#skills">Skills</a></li>
+      <li><a href="index.html#certificates">Certificates</a></li>
+      <li><a href="index.html#resume">Resume</a></li>
+      <li><a href="index.html#connect">Connect</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="projects-page-hero">
+    <div class="container">
+      <a href="index.html" class="back-link">← Back to home</a>
+      <p class="section-label">Work</p>
+      <h1 class="hero-name" style="font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 1rem;">All Projects</h1>
+      <p class="hero-bio">
+        A collection of things I've built, shipped, or am currently working on — ranging from
+        software tools to design systems and capstone research.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROJECTS LIST -->
+  <section style="padding-top: 0; border-top: none;">
+    <div class="container">
+
+      <!-- Filter bar -->
+      <div class="projects-filter">
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
+        <button class="filter-btn" onclick="filterProjects('React', this)">React</button>
+        <button class="filter-btn" onclick="filterProjects('Python', this)">Python</button>
+        <button class="filter-btn" onclick="filterProjects('Design', this)">Design</button>
+        <button class="filter-btn" onclick="filterProjects('Capstone', this)">Capstone</button>
+      </div>
+
+      <div class="projects-page-list" id="projects-container">
+
+        <!-- Project: Splittr -->
+        <a href="#" class="project-card" data-tags="React,Node.js">
+          <span class="project-status status-wip">In Progress</span>
+          <div class="project-header">
+            <span class="project-name">Splittr</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <p class="project-desc">
+            A mobile app that allows friends to easily split shared bills and track payments,
+            making group expenses simple and hassle-free. Designed with a focus on speed and
+            minimal friction for real-world use.
+          </p>
+          <div class="tags">
+            <span class="tag">React</span>
+            <span class="tag">Node.js</span>
+          </div>
+        </a>
+
+        <!-- Project: Guardian Vision -->
+        <a href="#" class="project-card" data-tags="Python,Electron.js,Capstone">
+          <span class="project-status status-complete">Completed</span>
+          <div class="project-header">
+            <span class="project-name">Guardian Vision</span>
+            <span class="project-arrow">↗</span>
+          </div>
+          <p class="project-desc">
+            An AI-powered gesture-based monitoring system for video surveillance that detects
+            and interprets human gestures to enhance security and situational awareness.
+            Developed as a capstone project with a full front-end interface and technical documentation.
+          </p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">Electron.js</span>
+            <span class="tag">Capstone</span>
+          </div>
+        </a>
+
+        <!-- Placeholder -->
+        <div class="project-placeholder">
+          <span>+</span>
+          More projects coming soon — currently building.
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed & built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script>
+    function filterProjects(tag, btn) {
+      // Update active button
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const cards = document.querySelectorAll('#projects-container .project-card');
+      cards.forEach(card => {
+        if (tag === 'all') {
+          card.style.display = 'block';
+        } else {
+          const tags = card.getAttribute('data-tags') || '';
+          card.style.display = tags.includes(tag) ? 'block' : 'none';
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
