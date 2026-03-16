@@ -157,9 +157,9 @@ section + section {
 }
 
 .hero-name em {
-  font-size: 3.05rem;
   font-style: italic;
   color: var(--accent);
+  white-space: nowrap;
 }
 
 .hero-bio {
@@ -174,7 +174,7 @@ section + section {
 .hero-links {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 /* ================================
@@ -836,6 +836,16 @@ footer a {
 
   /* Hero */
   .hero-bio { font-size: 0.975rem; }
+
+  .hero-links {
+    gap: 0.4rem;
+  }
+ 
+  .hero-links .btn {
+    font-size: 0.75rem;
+    padding: 0.45rem 0.75rem;
+    white-space: nowrap;
+  }
 
   /* About */
   .about-grid {
