@@ -179,32 +179,33 @@
 
       <!-- Filter bar -->
       <div class="projects-filter">
-        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button>
-        <button class="filter-btn" onclick="filterProjects('React', this)">React</button>
+        <button class="filter-btn active" onclick="filterProjects('all', this)">All</button> 
+        <button class="filter-btn" onclick="filterProjects('Next.js', this)">Next.js</button>
         <button class="filter-btn" onclick="filterProjects('Python', this)">Python</button>
         <button class="filter-btn" onclick="filterProjects('Design', this)">Design</button>
-        <button class="filter-btn" onclick="filterProjects('Capstone', this)">Mobile Dev</button>
+        <button class="filter-btn" onclick="filterProjects('Web App', this)">Web App</button>
         <button class="filter-btn" onclick="filterProjects('Capstone', this)">Capstone</button>
       </div>
 
       <div class="projects-page-list" id="projects-container">
 
-        <!-- Project: Splittr -->
-        <a href="#" class="project-card" data-tags="React,Node.js">
-          <span class="project-status status-wip">In Progress</span>
+        <!-- Project: Bana -->
+        <a href="https://bana-split.vercel.app/" target="_blank" class="project-card" data-tags="Next.js,Typescript,Tailwind CSS,Web App">
+          <!-- <span class="project-status status-wip">Completed</span> -->
+           <span class="project-status status-complete">Completed</span>
           <div class="project-header">
-            <span class="project-name">Splittr</span>
+            <span class="project-name">Bana</span>
             <span class="project-arrow">↗︎</span>
           </div>
           <p class="project-desc">
-            A mobile app that allows friends to easily split shared bills and track payments,
-            making group expenses simple and hassle-free. Designed with a focus on speed and
-            minimal friction for real-world use.
+            a web app bill-splitter that turns a group outing into individually itemized, 
+            printable/shareable receipts in minutes.
           </p>
           <div class="tags">
-            <span class="tag">React</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Mobile Dev</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Typescript</span>
+            <span class="tag">Tailwind CSS</span>
+            <span class="tag">Web App</span>
           </div>
         </a>
 
