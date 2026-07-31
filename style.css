@@ -174,7 +174,7 @@ section + section {
 .hero-bio {
   font-size: 1.05rem;
   color: var(--muted);
-  max-width: 520px;
+  max-width: 600px;
   line-height: 1.75;
   margin-bottom: 2rem;
   font-weight: 300;
