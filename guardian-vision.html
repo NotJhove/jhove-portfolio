@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guardian Vision - Capstone Project | Jhove Batarao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">JB.</a>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#roles">Roles</a></li>
+      <li><a href="#documentation">Documentation</a></li>
+      <li><a href="index.html" class="nav-connect-btn">← Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- BLOG HERO -->
+  <section id="blog-hero" class="blog-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Capstone Project</p>
+      <h1 class="hero-name">Guardian Vision</h1>
+      <p class="hero-tagline blog-subtitle">An AI-powered gesture-based monitoring system for video surveillance.</p>
+      <p class="hero-bio">
+        Guardian Vision detects and interprets human gestures in real time to enhance security
+        and situational awareness. Since the full working system can't be shared publicly, this
+        page walks through the story behind it — the photos, the people, and the documentation
+        that shaped it.
+      </p>
+      <div class="tags">
+        <span class="tag">Python</span>
+        <span class="tag">Electron.js</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">Capstone</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section id="overview">
+    <div class="container">
+      <p class="section-label">Overview</p>
+      <h2 class="section-title">What is Guardian Vision?</h2>
+      <div class="about-text blog-overview">
+        <p>
+          Guardian Vision is an <strong>AI-powered multi-camera surveillance system </strong>developed to 
+          assist security personnel with <strong>post-incident investigations</strong> in small establishments. 
+          By combining computer vision and action recognition technologies, the system automatically detects people, 
+          tracks their movement across camera views, recognizes specific human gestures, and timestamps important events 
+          for <strong>faster evidence retrieval</strong>.
+        </p>
+        <p>
+          Instead of <strong>manually reviewing </strong>hours of surveillance footage, users can quickly search for detected actions, 
+          review categorized incidents, and save relevant video clips for further investigation. Guardian Vision 
+          streamlines the investigation process while maintaining data privacy through secure local storage and automatic 
+          deletion of stored footage after 30 days.
+        </p>
+      </div>
+
+      <div class="about-facts blog-facts">
+        <div class="fact-item">
+          <p class="fact-label">Duration</p>
+          <p class="fact-value">2025 – 2026</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Team size</p>
+          <p class="fact-value">4 members</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Category</p>
+          <p class="fact-value">AI / Computer Vision</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Status</p>
+          <p class="fact-value">Completed</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="container">
+      <p class="section-label">Behind the Build</p>
+      <h2 class="section-title">Gallery</h2>
+      <div class="gallery-grid">
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="capstone-photo-1.png" alt="Guardian Vision interface preview" onclick="openLightbox(this)" />
+          <figcaption>Main monitoring dashboard interface</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img"src="capstone-photo-2.png" alt="Gesture detection demo" onclick="openLightbox(this)" />
+          <figcaption>Live gesture detection in testing</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="capstone-photo-3.jpg" alt="Early development phase" onclick="openLightbox(this)" />
+          <figcaption>Early development phase</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="capstone-photo-4.jpg" alt="Expert validation session" onclick="openLightbox(this)" />
+          <figcaption>Expert validation session</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="capstone-photo-5.jpg" alt="Book-binded capstone project" onclick="openLightbox(this)" />
+          <figcaption>Book-binded capstone project</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="capstone-photo-6.jpg" alt="The group behind the project" onclick="openLightbox(this)" />
+          <figcaption>The group behind the project</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ROLES -->
+  <section id="roles">
+    <div class="container">
+      <p class="section-label">My Journey</p>
+      <h2 class="section-title">Roles & Responsibilities</h2>
+
+      <div class="roles-list">
+
+        <div class="role-card">
+          <div class="role-header">
+            <span class="role-name">Project Planner</span>
+            <span class="role-title">First role</span>
+          </div>
+          <p class="role-desc">
+            Planned the project timeline, coordinated team tasks, and ensured milestones were completed on schedule.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-header">
+            <span class="role-name">Front-End Developer</span>
+            <span class="role-title">Second role</span>
+          </div>
+          <p class="role-desc">
+            Designed and developed the user interface, focusing on usability, responsiveness, and a seamless user experience.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-header">
+            <span class="role-name">Documentation Specialist</span>
+            <span class="role-title">Third role</span>
+          </div>
+          <p class="role-desc">
+            Prepared and maintained the project's technical documentation, research paper, and system reports with accuracy and consistency.
+          </p>
+        </div>
+
+        <div class="role-card">
+          <div class="role-header">
+            <span class="role-name">QA & Systems Tester</span>
+            <span class="role-title">Fourth role</span>
+          </div>
+          <p class="role-desc">
+            Conducted system testing, identified and documented issues, and verified that features met functional and quality requirements.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- DOCUMENTATION -->
+  <section id="documentation">
+    <div class="container">
+      <p class="section-label">Read More</p>
+      <h2 class="section-title">Documentation</h2>
+
+      <div class="doc-list">
+
+        <a href="https://drive.google.com/file/d/1il9EzIvOtIhrDAodd5k5zG9JuI4_k87c/view?usp=sharing" target="_blank" class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Capstone Documentation</p>
+            <p class="doc-desc">Read the abstract of the capstone project</p>
+          </div>
+          <span class="doc-link">View ↗︎</span>
+        </a>
+
+        <a href="https://canva.link/zzo08xxjrwtlerb" target="_blank" class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Defense Presentation Deck</p>
+            <p class="doc-desc">Slides used during the final capstone defense</p>
+          </div>
+          <span class="doc-link">View ↗︎</span>
+        </a>
+
+        <a href="https://drive.google.com/file/d/1Z36ld2ud1es_dgNYTKuD2Z5dwJj7XpWb/view?usp=sharing" target="_blank" class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Demo Video</p>
+            <p class="doc-desc">Short video of the system in action (early stages)</p>
+          </div>
+          <span class="doc-link">View ↗︎</span>
+        </a>
+
+      </div>
+
+      <div class="blog-cta">
+        <a href="index.html#projects" class="btn btn-primary">← Back to projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imgEl) {
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt;
+      lightboxCaption.textContent = imgEl.closest('figure').querySelector('figcaption').textContent;
+      lightbox.classList.add('open');
+    }
+
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>
