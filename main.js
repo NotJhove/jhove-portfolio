@@ -62,3 +62,20 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
 });
+
+  document.querySelectorAll('.resume-item-link').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      // Only intervene on touch devices — desktop keeps normal click behavior
+      if (window.matchMedia('(hover: none)').matches) {
+        if (!link.classList.contains('tapped')) {
+          e.preventDefault();
+          // close any other open tab first
+          document.querySelectorAll('.resume-item-link.tapped').forEach(function (other) {
+            if (other !== link) other.classList.remove('tapped');
+          });
+          link.classList.add('tapped');
+        }
+        // if already tapped, do nothing here — let the click through to navigate
+      }
+    });
+  });

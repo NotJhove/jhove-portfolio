@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: change page title -->
+  <title>Internship | Jhove Batarao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV — same on every page, just keep as-is -->
+  <nav>
+    <a href="index.html" class="nav-logo">JB.</a>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#story">The Story</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#takeaways">Takeaways</a></li>
+      <li><a href="index.html" class="nav-connect-btn">← Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="blog-hero" class="blog-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Internship</p>
+      <h1 class="hero-name">Software QA Intern</h1>
+      <p class="hero-tagline blog-subtitle">1902 Software Development</p>
+      <p class="hero-bio">
+        My internship as a Software QA Intern gave me hands-on experience with software testing in a professional development environment. 
+        I worked on both manual and automated testing, helping improve the quality of web applications while learning industry tools and 
+        workflows.
+      </p>
+      <div class="tags">
+        <span class="tag">Software Testing</span>
+        <span class="tag">Quality Assurance</span>
+        <span class="tag">Automated Testing</span>
+        <span class="tag">Manual Testing</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STORY -->
+  <section id="story">
+    <div class="container">
+      <p class="section-label">The Story</p>
+      <h2 class="section-title">What this experience was like</h2>
+      <div class="about-text blog-overview">
+        <p>
+          As a Software QA Intern, I worked with <strong>web applications, AI-powered plugins, and e-commerce platforms</strong> such as Magento, 
+          Shopify, and WordPress. My responsibilities included creating and maintaining automated test scripts using <strong>Playwright</strong> and 
+          <strong>BugBug</strong>, executing test cases, reporting defects, and verifying fixes. One of the highlights of my internship was helping 
+          migrate automated tests from BugBug to Playwright, making the test suite more flexible and maintainable.
+        </p>
+        <p>
+          The internship challenged me to think <strong>beyond simply finding bugs</strong>. I learned how to analyze application behavior, 
+          write reliable automation scripts, and work closely with developers to resolve issues. With each project, 
+          I became more confident in debugging, testing, and adapting to new tools and technologies.
+        </p>
+      </div>
+
+      <div class="about-facts blog-facts">
+        <div class="fact-item">
+          <p class="fact-label">Duration</p>
+          <p class="fact-value">April - June 2026</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Organization</p>
+          <p class="fact-value">1902 Software Development</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Role</p>
+          <p class="fact-value">Software QA Intern</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Location</p>
+          <p class="fact-value">Muntinlupa, Philippines</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS — optional photo gallery, delete this section if not needed -->
+  <section id="highlights">
+    <div class="container">
+      <p class="section-label">Highlights</p>
+      <h2 class="section-title">Moments Along the Way</h2>
+      <div class="gallery-grid">
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/internship-photo-1.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Internship ID</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/internship-photo-2.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>My work desk</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/internship-photo-3.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Pizza delivery lol</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/internship-photo-4.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Free food!</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/internship-photo-5.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Completion of internship</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/internship-photo-6.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>With my internship friends</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TAKEAWAYS -->
+  <section id="takeaways">
+    <div class="container">
+      <p class="section-label">Reflection</p>
+      <h2 class="section-title">What I took away from it</h2>
+
+      <div class="doc-list">
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Quality-Focused Mindset</p>
+            <p class="doc-desc">I learned to look beyond whether a feature works and focus on the overall user experience.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Test Automation</p>
+            <p class="doc-desc">Building automated tests showed me how automation improves efficiency and software reliability.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Professional Collaboration</p>
+            <p class="doc-desc">Working with developers and fellow QA engineers strengthened my communication and teamwork skills.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-cta">
+        <a href="index.html#resume" class="btn btn-primary">← Back to resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX — leave this exactly as-is on every page -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imgEl) {
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt;
+      lightboxCaption.textContent = imgEl.closest('figure').querySelector('figcaption').textContent;
+      lightbox.classList.add('open');
+    }
+
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

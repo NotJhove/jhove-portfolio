@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: change page title -->
+  <title>BarkStudio | Jhove Batarao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV — same on every page, just keep as-is -->
+  <nav>
+    <a href="index.html" class="nav-logo">JB.</a>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#story">The Story</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#takeaways">Takeaways</a></li>
+      <li><a href="index.html" class="nav-connect-btn">← Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="blog-hero" class="blog-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Organization</p>
+      <h1 class="hero-name">Associate Director for Visual & Creatives</h1>
+      <p class="hero-tagline blog-subtitle">BarkStudio</p>
+      <p class="hero-bio">
+        Serving as the Associate Director for Visual and Creatives at BarkStudio gave me the opportunity to 
+        contribute to our university's media organization through visual storytelling. It was an experience that strengthened 
+        both my creative skills and my ability to work in a fast-paced, team-oriented environment.
+      </p>
+      <div class="tags">
+        <span class="tag">Creatives</span>
+        <span class="tag">Collaboration</span>
+        <span class="tag">Design</span>
+        <span class="tag">Leadership</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STORY -->
+  <section id="story">
+    <div class="container">
+      <p class="section-label">The Story</p>
+      <h2 class="section-title">What this experience was like</h2>
+      <div class="about-text blog-overview">
+        <p>
+          Joining BarkStudio allowed me to apply <strong>my passion for graphic design</strong> beyond the classroom. 
+          As the Associate Director for Visual and Creatives, I was responsible for creating publication materials 
+          that supported the organization's coverage of university <strong>events, announcements, and UAAP competitions</strong>. 
+        </p>
+        <p>
+          Working in a student media organization also meant <strong>adapting to tight deadlines</strong> and constantly changing priorities. 
+          Event schedules could shift with little notice, requiring quick revisions and efficient collaboration with editors 
+          and content creators. Over time, I became more confident in managing multiple design tasks, 
+          accepting feedback, and producing quality work under pressure. The experience taught me that great creative work is 
+          not only about aesthetics but also about <strong>teamwork, communication, and reliability</strong>.
+        </p>
+      </div>
+
+      <div class="about-facts blog-facts">
+        <div class="fact-item">
+          <p class="fact-label">Duration</p>
+          <p class="fact-value">2024 - 2026</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Organization</p>
+          <p class="fact-value">BarkStudio</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Role</p>
+          <p class="fact-value">Associate Director | Visual & Creatives</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Location</p>
+          <p class="fact-value">Manila, Philippines</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS — optional photo gallery, delete this section if not needed -->
+  <section id="highlights">
+    <div class="container">
+      <p class="section-label">Highlights</p>
+      <h2 class="section-title">Moments Along the Way</h2>
+      <div class="gallery-grid">
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/barkstudio-photo-1.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Awarded by the Organization</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/barkstudio-photo-2.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Sample work</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/barkstudio-photo-3.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Group photo with orgmates</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TAKEAWAYS -->
+  <section id="takeaways">
+    <div class="container">
+      <p class="section-label">Reflection</p>
+      <h2 class="section-title">What I took away from it</h2>
+
+      <div class="doc-list">
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Visual Communication</p>
+            <p class="doc-desc">I learned that effective design is about communicating a message clearly, not just making it visually appealing.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Creative Collaboration</p>
+            <p class="doc-desc">Working alongside writers, photographers, and fellow designers showed me how collaboration leads to stronger and more cohesive content.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Working Under Pressure</p>
+            <p class="doc-desc">Managing publication deadlines and last-minute revisions taught me to stay organized, adaptable, and focused even in fast-paced situations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-cta">
+        <a href="index.html#resume" class="btn btn-primary">← Back to resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX — leave this exactly as-is on every page -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imgEl) {
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt;
+      lightboxCaption.textContent = imgEl.closest('figure').querySelector('figcaption').textContent;
+      lightbox.classList.add('open');
+    }
+
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

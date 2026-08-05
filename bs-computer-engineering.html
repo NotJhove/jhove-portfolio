@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TODO: change page title -->
+  <title>BS Computer Engineering | Jhove Batarao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV — same on every page, just keep as-is -->
+  <nav>
+    <a href="index.html" class="nav-logo">JB.</a>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#story">The Story</a></li>
+      <li><a href="#highlights">Highlights</a></li>
+      <li><a href="#takeaways">Takeaways</a></li>
+      <li><a href="index.html" class="nav-connect-btn">← Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="blog-hero" class="blog-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Education</p>
+      <h1 class="hero-name">BS in Computer Engineering</h1>
+      <p class="hero-tagline blog-subtitle">National University - 2026</p>
+      <p class="hero-bio">
+        Studying Computer Engineering gave me the opportunity to explore both hardware and software, 
+        from designing digital circuits to developing full-stack applications and AI-powered systems. 
+        Each semester introduced new technologies, projects, and challenges that strengthened my technical foundation 
+        and problem-solving skills.
+      </p>
+      <div class="tags">
+        <span class="tag">College</span>
+        <span class="tag">Academic</span>
+        <span class="tag">Engineering</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE STORY -->
+  <section id="story">
+    <div class="container">
+      <p class="section-label">The Story</p>
+      <h2 class="section-title">What this experience was like</h2>
+      <div class="about-text blog-overview">
+        <p>
+          My journey in <strong>Computer Engineering</strong> began with learning the fundamentals of programming, 
+          electronics, and digital logic before gradually progressing into more advanced topics such as 
+          embedded systems, computer architecture, software engineering, networking, and data science. 
+          Through laboratory exercises, coursework, and team projects, I gained experience 
+          turning theoretical concepts into working solutions. One of the <strong> memorable milestones </strong>was developing 
+          our capstone project, Guardian Vision, an AI-powered surveillance system that combined computer vision, machine 
+          learning, and software development to support post-incident investigations.
+        </p>
+        <p>
+          Throughout the program, I learned that <strong>engineering</strong> is just as much about <strong>persistence</strong> as it is about technical knowledge. 
+          Many projects required debugging hardware connections, troubleshooting software issues, and collaborating with teammates 
+          under tight deadlines. Those experiences taught me to approach problems methodically, communicate effectively within a team, 
+          and continuously improve my work through testing, feedback, and iteration. By the time I graduated, I had developed not 
+          only <strong>stronger technical skills</strong> but also the <strong>confidence to take on unfamiliar challenges</strong> 
+          and keep learning beyond the classroom.
+        </p>
+      </div>
+
+      <div class="about-facts blog-facts">
+        <div class="fact-item">
+          <p class="fact-label">Duration</p>
+          <p class="fact-value">2022 - 2026</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Organization</p>
+          <p class="fact-value">National University - Manila</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Degree</p>
+          <p class="fact-value">BS Computer Engineering</p>
+        </div>
+        <div class="fact-item">
+          <p class="fact-label">Location</p>
+          <p class="fact-value">Manila, Philippines</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS — optional photo gallery, delete this section if not needed -->
+  <section id="highlights">
+    <div class="container">
+      <p class="section-label">Highlights</p>
+      <h2 class="section-title">Moments Along the Way</h2>
+      <div class="gallery-grid">
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/college-photo-6.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Early Days - Orientation</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/college-photo-5.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Group Photo with Blockmates</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/college-photo-4.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Written Activity - Circuits</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/college-photo-3.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Lab Activity - Electronic Signals</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/college-photo-2.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Capstone Project Completion</figcaption>
+        </figure>
+
+        <figure class="gallery-item">
+          <img class="gallery-img" src="images/college-photo-1.jpg" alt="[describe photo]" onclick="openLightbox(this)" />
+          <figcaption>Career Fair Hosted by University</figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TAKEAWAYS -->
+  <section id="takeaways">
+    <div class="container">
+      <p class="section-label">Reflection</p>
+      <h2 class="section-title">What I took away from it</h2>
+
+      <div class="doc-list">
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Problem-Solving Mindset</p>
+            <p class="doc-desc">Learning to break complex problems into smaller, manageable pieces became one of the most 
+              valuable habits I developed throughout the program.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Adaptability</p>
+            <p class="doc-desc">Every course introduced unfamiliar tools and technologies, teaching me that continuous 
+              learning is essential in the fast-changing field of technology.</p>
+          </div>
+        </div>
+        <div class="doc-item">
+          <div class="doc-main">
+            <p class="doc-name">Collaboration & Communication</p>
+            <p class="doc-desc">Working on team projects showed me that successful engineering depends not only on technical 
+              ability but also on clear communication, shared responsibility, and supporting one another toward a common goal.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="blog-cta">
+        <a href="index.html#resume" class="btn btn-primary">← Back to resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX — leave this exactly as-is on every page -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imgEl) {
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt;
+      lightboxCaption.textContent = imgEl.closest('figure').querySelector('figcaption').textContent;
+      lightbox.classList.add('open');
+    }
+
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>
