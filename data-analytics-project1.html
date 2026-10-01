@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>COVID Analysis - Data Analytics Project | Jhove Batarao</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/title-logo.png" />
+  <link rel="apple-touch-icon" href="images/title-logo.png" />
+</head>
+<body>
+
+  <!-- NAV  -->
+  <nav>
+    <a href="index.html" class="nav-logo">JB.</a>
+    <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a href="#dataexploration">Data Exploration</a></li>
+      <li><a href="#datavisualization">Data Visualization</a></li>
+      <li><a href="index.html" class="nav-connect-btn">← Portfolio</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="blog-hero" class="blog-hero">
+    <div class="container">
+      <p class="hero-eyebrow">Data Analytics</p>
+      <h1 class="hero-name">COVID Analysis</h1>
+      <p class="hero-tagline blog-subtitle">An interactive data analysis project exploring global COVID-19 trends.</p>
+      <p class="hero-bio">
+        This data analysis project investigates global COVID-19 trends, case distributions, and mortality rates across 
+        different countries from 2020 to 2021. This project is basically two projects combined into one, 
+        where the first part focuses on analyzing COVID-19 data using Excel and SQL, 
+        while the second part involves creating an interactive dashboard using Tableau to visualize the findings.
+      </p>
+      <div class="tags">
+        <span class="tag">Data Analytics</span>
+        <span class="tag">Excel</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Tableau</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA EXPLORATION -->
+  <section id="dataexploration">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Data Exploration</p>
+          <h2 class="section-title">Using SQL and Excel</h2>
+        </div>
+        <a href="https://github.com/NotJhove/DataAnalyticsProject-COVID2020" class="btn btn-subtle btn-green" target="_blank" rel="noopener">View repository <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="about-text blog-overview">
+        <p>
+            The dataset for this analysis was sourced from <strong>Our World in Data</strong>. 
+            Initial data validation and pre-processing were conducted in <strong>Excel</strong>, where the dataset was partitioned 
+            into two structured files (CovidDeaths and CovidVaccinations) to optimize query 
+            performance and streamline ingestion into <strong>Microsoft SQL Server</strong>.
+        </p>
+        <p>
+            Using <strong>SQL</strong>, I executed exploratory data queries-leveraging aggregate functions, CTEs, 
+            and joins—to isolate key mortality metrics across regions. The cleaned and 
+            structured query results were then exported to prepare the foundation 
+            for interactive visualization in<strong> Tableau</strong>. 
+        </p>
+      </div>
+
+      <div class="repo-screen" role="img" aria-label="Preview of the SQL project GitHub repository">
+        <div class="repo-screen-bar">
+          <span class="repo-dot"></span><span class="repo-dot"></span><span class="repo-dot"></span>
+          <span class="repo-url">github.com/NotJhove/DataAnalyticsProject-COVID2020</span>
+        </div>
+        <div class="repo-screen-body">
+          <p class="repo-name">NotJhove / <strong>DataAnalyticsProject-COVID2020</strong></p>
+          <p class="repo-desc">SQL exploration of global COVID-19 deaths and vaccinations data using Microsoft SQL Server.</p>
+          <pre class="repo-code"><code><span class="c">-- Total deaths vs. population by country</span>
+<span class="k">SELECT</span> location, <span class="k">MAX</span>(total_deaths) <span class="k">AS</span> TotalDeaths
+<span class="k">FROM</span> CovidDeaths
+<span class="k">GROUP BY</span> location
+<span class="k">ORDER BY</span> TotalDeaths <span class="k">DESC</span>;
+<span class="c">-- View GitHub Repo for actual SQL file</span></code></pre>
+          <div class="tags">
+            <span class="tag">SQL Server</span>
+            <span class="tag">CTEs</span>
+            <span class="tag">Joins</span>
+            <span class="tag">Aggregates</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DATA VISUALIZATION -->
+  <section id="datavisualization">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <p class="section-label">Data Visualization</p>
+          <h2 class="section-title">Tableau Dashboard</h2>
+        </div>
+        <a href="https://public.tableau.com/app/profile/Jhove.Batarao" class="btn btn-subtle btn-green" target="_blank" rel="noopener">View on Tableau Public <span aria-hidden="true">↗</span></a>
+      </div>
+      <!-- TABLEAU PUBLIC EMBED (from Tableau Public > Share > Embed Code) -->
+      <div class="tableau-wrap">
+        <div class='tableauPlaceholder' id='viz1790852624436' style='position: relative'><noscript><a href='#'><img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject1-COVID&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='PortfolioProject1-COVID&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Po&#47;PortfolioProject1-COVID&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /><param name='filter' value='publish=yes' /></object></div>
+        <script type='text/javascript'>
+          var divElement = document.getElementById('viz1790852624436');
+          var vizElement = divElement.getElementsByTagName('object')[0];
+          if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1177px';}
+          var scriptElement = document.createElement('script');
+          scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+          vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+      </div>
+      <p class="video-caption">Interactive dashboard: filter and hover to explore cases, deaths, and vaccinations by country. Dashboard and elements may take a moment to load and may not display correctly in all browsers.</p>
+
+      <div class="blog-cta">
+        <a href="index.html#projects" class="btn btn-primary">← Back to projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p>Designed &amp; built by Jhove Batarao · <a href="https://github.com/NotJhove" target="_blank">GitHub</a></p>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX — leave this exactly as-is on every page -->
+  <div id="lightbox" class="lightbox">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <img id="lightbox-img" src="" alt="" />
+    <p id="lightbox-caption" class="lightbox-caption"></p>
+  </div>
+
+  <script src="main.js"></script>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+
+    function openLightbox(imgEl) {
+      lightboxImg.src = imgEl.src;
+      lightboxImg.alt = imgEl.alt;
+      lightboxCaption.textContent = imgEl.closest('figure').querySelector('figcaption').textContent;
+      lightbox.classList.add('open');
+    }
+
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  </script>
+</body>
+</html>

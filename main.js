@@ -79,3 +79,123 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
+
+/* ================================
+   PROJECTS PAGE — CATEGORY FILTER
+   Reads ?category=data|software|hardware from the URL and shows only
+   matching cards. Does nothing on pages without [data-category] cards.
+   ================================ */
+
+(function () {
+  var cards = document.querySelectorAll('.project-card[data-category]');
+  if (!cards.length) return;
+
+  var buttons = document.querySelectorAll('.filter-btn[data-filter]');
+  var params  = new URLSearchParams(window.location.search);
+  var current = params.get('category') || 'all';
+
+  function applyFilter(category) {
+    cards.forEach(function (card) {
+      var match = category === 'all' || card.dataset.category === category;
+      card.classList.toggle('is-hidden', !match);
+    });
+    buttons.forEach(function (btn) {
+      btn.classList.toggle('active', btn.dataset.filter === category);
+    });
+  }
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var category = btn.dataset.filter;
+      applyFilter(category);
+      // keep the URL shareable without reloading
+      var url = category === 'all' ? window.location.pathname
+                                   : '?category=' + category;
+      history.replaceState(null, '', url);
+    });
+  });
+
+  applyFilter(current);
+})();
+
+
+/* ================================
+   PROJECT CATEGORY CAROUSEL (home page)
+   Middle card = selected. Clicking the top/bottom card slides it
+   into the middle; clicking the middle card opens its link.
+   ================================ */
+
+(function () {
+  var grid = document.querySelector('.category-grid');
+  if (!grid) return;
+
+  var cards = Array.prototype.slice.call(grid.querySelectorAll('.category-card'));
+  var total = cards.length;
+  if (total < 3) return;
+
+  var active = 0;                 // starts on the first card (Data Analytics)
+  grid.classList.add('is-carousel');
+
+  // offset of card i relative to the active one, as -1, 0 or 1
+  function offsetOf(i) {
+    var d = (i - active + total) % total;
+    return d === 0 ? 0 : (d === 1 ? 1 : -1);
+  }
+
+  function render(animate) {
+    cards.forEach(function (card, i) {
+      var next = String(offsetOf(i));
+      var prev = card.getAttribute('data-pos');
+      var wraps = animate && prev !== null && prev !== next && prev !== '0' && next !== '0';
+
+      if (wraps) card.classList.add('jump');
+      card.setAttribute('data-pos', next);
+      if (next === '0') card.setAttribute('aria-current', 'true');
+      else card.removeAttribute('aria-current');
+      if (wraps) {
+        void card.offsetWidth;    // commit the new position before fading in
+        card.classList.remove('jump');
+      }
+    });
+  }
+
+  function select(i) {
+    active = (i + total) % total;
+    render(true);
+  }
+
+  cards.forEach(function (card, i) {
+    card.addEventListener('click', function (e) {
+      if (i !== active) {
+        e.preventDefault();       // side card: bring forward instead of navigating
+        select(i);
+      }
+      // selected card: normal link navigation
+    });
+  });
+
+  // Arrow keys move the selection when focus is on a card
+  grid.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowDown') { e.preventDefault(); select(active + 1); cards[active].focus(); }
+    if (e.key === 'ArrowUp')   { e.preventDefault(); select(active - 1); cards[active].focus(); }
+  });
+
+  render(false);
+})();
+
+
+/* ================================
+   ABOUT PHOTO — tap to swap on touch devices
+   ================================ */
+
+(function () {
+  var swap = document.querySelector('.about-photo-swap');
+  if (!swap) return;
+
+  swap.addEventListener('click', function () {
+    // desktop uses CSS :hover; only toggle on devices that can't hover
+    if (window.matchMedia('(hover: none)').matches) {
+      swap.classList.toggle('swapped');
+    }
+  });
+})();
