@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/title-logo.png" />
+  <link rel="apple-touch-icon" href="images/title-logo.png" />
   <style>
     .projects-page-hero {
       padding-top: 9rem;
@@ -180,17 +182,35 @@
       <!-- Filter bar -->
       <div class="projects-filter">
         <button class="filter-btn active" onclick="filterProjects('all', this)">All</button> 
-        <button class="filter-btn" onclick="filterProjects('Next.js', this)">Next.js</button>
-        <button class="filter-btn" onclick="filterProjects('Python', this)">Python</button>
-        <button class="filter-btn" onclick="filterProjects('Design', this)">Design</button>
-        <button class="filter-btn" onclick="filterProjects('Web App', this)">Web App</button>
-        <button class="filter-btn" onclick="filterProjects('Capstone', this)">Capstone</button>
+        <button class="filter-btn" onclick="filterProjects('Data Analytics', this)">Data Analytics</button>
+        <button class="filter-btn" onclick="filterProjects('Software', this)">Software Engineering</button>
+        <button class="filter-btn" onclick="filterProjects('Hardware', this)">Hardware Projects</button>
       </div>
 
       <div class="projects-page-list" id="projects-container">
 
+        <!-- Project: COVID Analysis -->
+        <a href="data-analytics-project1.html" target="_blank" class="project-card" data-tags="Data Analytics, Python, SQL, Tableau">
+          <!-- <span class="project-status status-wip">Completed</span> -->
+           <span class="project-status status-complete">Completed</span>
+          <div class="project-header">
+            <span class="project-name">COVID Analysis</span>
+            <span class="project-arrow">↗︎</span>
+          </div>
+          <p class="project-desc">
+            An interactive data analysis project that explores global COVID-19 trends, case distributions, 
+            and mortality rates across different regions from 2020 to 2021.
+          </p>
+          <div class="tags">
+            <span class="tag">Data Analytics</span>
+            <span class="tag">Excel</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Tableau</span>
+          </div>
+        </a>
+
         <!-- Project: Bana -->
-        <a href="https://bana-split.vercel.app/" target="_blank" class="project-card" data-tags="Next.js,Typescript,Tailwind CSS,Web App">
+        <a href="https://bana-split.vercel.app/" target="_blank" class="project-card" data-tags="Software, Next.js,Typescript,Tailwind CSS,Web App">
           <!-- <span class="project-status status-wip">Completed</span> -->
            <span class="project-status status-complete">Completed</span>
           <div class="project-header">
@@ -202,6 +222,7 @@
             printable/shareable receipts in minutes.
           </p>
           <div class="tags">
+            <span class="tag">Software</span>
             <span class="tag">Next.js</span>
             <span class="tag">Typescript</span>
             <span class="tag">Tailwind CSS</span>
@@ -333,6 +354,21 @@
         }
       });
     }
+
+    const categoryMap = {
+        data: 'Data Analytics',
+        software: 'Software',
+        hardware: 'Hardware'
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const tag = categoryMap[params.get('category')];
+
+      if (tag) {
+        const btn = Array.from(document.querySelectorAll('.filter-btn'))
+          .find(b => b.getAttribute('onclick').includes("'" + tag + "'"));
+        if (btn) filterProjects(tag, btn);
+      }
   </script>
 
   <script src="main.js"></script>
