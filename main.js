@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
   if (!('IntersectionObserver' in window)) return;
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  var TRIGGER_OFFSET = '30%';
+  var TRIGGER_OFFSET = '10%';
 
   var targets = [];
 
