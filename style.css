@@ -1692,3 +1692,38 @@ footer a {
   background: transparent;
   color: var(--text);
 }
+
+/* ================================
+   SCROLL REVEAL — fade up as sections enter view
+   .reveal is added by main.js (so content stays visible if JS fails)
+   ================================ */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Hero fades in on page load (it's already on screen, so no scroll trigger) */
+@keyframes hero-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  #hero .container > * {
+    animation: hero-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  }
+  #hero .container > :nth-child(2) { animation-delay: 0.08s; }
+  #hero .container > :nth-child(3) { animation-delay: 0.16s; }
+  #hero .container > :nth-child(4) { animation-delay: 0.24s; }
+  #hero .container > :nth-child(5) { animation-delay: 0.32s; }
+}

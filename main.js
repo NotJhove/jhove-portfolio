@@ -199,3 +199,64 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 })();
+
+/* ================================
+   SCROLL REVEAL
+   Fades elements up as they enter the viewport. Grids of items
+   (skills, certificates) reveal one by one with a slight stagger.
+   Skips entirely for reduced-motion users.
+   ================================ */
+
+(function () {
+  if (!('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  var TRIGGER_OFFSET = '30%';
+
+  var targets = [];
+
+  document.querySelectorAll(
+    '#about > .container, #projects > .container, #skills > .container, ' +
+    '#certificates > .container, #resume > .container, #connect > .container'
+  ).forEach(function (container) {
+    Array.prototype.forEach.call(container.children, function (child) {
+      // Reveal items of these lists individually instead of the whole block
+      var inner = null;
+      if (child.matches('.skills-grid'))    inner = child.querySelectorAll('.skill-group');
+      else if (child.matches('.cert-list')) inner = child.querySelectorAll('.cert-item');
+
+      if (inner) {
+        Array.prototype.forEach.call(inner, function (item, i) {
+          item.style.transitionDelay = (i % 4) * 90 + 'ms';
+          targets.push(item);
+        });
+      } else {
+        targets.push(child);
+      }
+    });
+  });
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      // also reveal anything already scrolled past (e.g. after a nav-link jump)
+      if (!entry.isIntersecting && entry.boundingClientRect.top >= 0) return;
+
+      var el = entry.target;
+      el.classList.add('is-visible');
+      observer.unobserve(el);
+
+      // clean up afterwards so it doesn't interfere with hover effects
+      el.addEventListener('transitionend', function done(e) {
+        if (e.target !== el || e.propertyName !== 'opacity') return;
+        el.classList.remove('reveal', 'is-visible');
+        el.style.transitionDelay = '';
+        el.removeEventListener('transitionend', done);
+      });
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -' + TRIGGER_OFFSET + ' 0px' });
+
+  targets.forEach(function (el) {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+})();
